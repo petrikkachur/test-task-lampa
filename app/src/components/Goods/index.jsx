@@ -29,7 +29,7 @@ export default function Goods() {
 	};
 
 	useEffect(() => {
-		// fetchGoods();
+		fetchGoods();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
