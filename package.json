@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.1.1",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-static": "^5.0.0",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^7.0.0-alpha.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "node index.js && cd app && react-scripts build",
+    "test": "node index.js && cd app && react-scripts test --env=jsdom",
+    "eject": "node index.js && cd app && react-scripts eject",
+    "heroku-postbuild": "cd app && npm install && npm run build"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.3.0"
+  }
+}
