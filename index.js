@@ -24,8 +24,8 @@ app.use(statics(path.join(__dirname, 'assets')));
 
 app.use(statics(path.join(__dirname, 'client', 'build')));
 
-router.get('/', async (ctx, next) => {
-	await send(path.join(__dirname, 'client', 'build', 'index.html'));
+router.get('(.*)', async (ctx, next) => {
+	await send(ctx, './client/build/index.html');
 	next();
 });
 //*
