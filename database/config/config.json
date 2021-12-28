@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "peter",
-    "database": "lampa",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "username",
+    "password": "password",
+    "database": "database",
+    "host": "host",
+    "dialect": "dialect"
   },
   "test": {
-    "username": "postgres",
-    "password": "peter",
-    "database": "lampa",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "username",
+    "password": "password",
+    "database": "database",
+    "host": "host",
+    "dialect": "dialect"
   },
   "production": {
-    "username": "postgres",
-    "password": "peter",
-    "database": "lampa",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "username",
+    "password": "password",
+    "database": "database",
+    "host": "host",
+    "dialect": "dialect"
   }
 }

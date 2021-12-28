@@ -19,19 +19,16 @@ app.use(
 	})
 );
 app.use(statics(path.join(__dirname, 'assets')));
-// app.use(statics(path.join(__dirname, 'client/build')));
+//* This is for build
+app.use(statics(path.join(__dirname, 'assets')));
 
-// router.get('(.*)', async (ctx, next) => {
-// 	try {
-// 		return await send(
-// 			ctx,
-// 			path.join(__dirname + '/client/build/index.html')
-// 		);
-// 	} catch (err) {
-// 		return next();
-// 	}
-// });
+app.use(statics(path.join(__dirname, 'client', 'build')));
 
+router.get('/', async (ctx, next) => {
+	await send(path.join(__dirname, 'client', 'build', 'index.html'));
+	next();
+});
+//*
 app.use(router.routes());
 app.use(api.routes());
 app.use(router.allowedMethods());
