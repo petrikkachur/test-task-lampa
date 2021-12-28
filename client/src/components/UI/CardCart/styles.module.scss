@@ -1,0 +1,51 @@
+.card{
+    display: flex;
+    justify-content: space-between;
+    max-height: 150px;
+    padding-right: 20px;
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid rgb(204,204,204);
+    box-shadow: 0px 0px 10px  rgb(201, 201, 201);
+
+}
+.imageContainer{
+    display: flex;
+
+}
+.image{
+    display: block;
+    width: 200px;
+    height: 150px;
+}
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    max-width: 400px;
+}
+.title{
+    margin: 0;
+}
+.description{
+    margin: 0;
+    max-height: 70px;
+	overflow: hidden;
+}
+.price{
+    margin: 0;
+}
+.btnContainer{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    width: 120px;
+    span {
+        margin: 0 15px;
+    }
+}
+.btn{
+    width: 36px;
+}

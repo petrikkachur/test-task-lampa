@@ -1,11 +1,15 @@
 {
+
   "dependencies": {
     "@koa/cors": "^3.1.0",
     "@koa/router": "^10.1.1",
+    "joi": "^17.5.0",
     "keygrip": "^1.1.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-static": "^5.0.0",
+    "lodash": "^4.17.21",
+    "lodash.omit": "^4.5.0",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
@@ -13,7 +17,7 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "dev": "nodemon index.js",
     "build": "node index.js && cd app && react-scripts build",
     "test": "node index.js && cd app && react-scripts test --env=jsdom",
