@@ -19,8 +19,9 @@ app.use(
 	})
 );
 app.use(statics(path.join(__dirname, 'assets')));
-//* This is for build
+app.use(api.routes());
 
+//* This is for build
 app.use(statics(path.join(__dirname, 'client', 'build')));
 
 router.get('(.*)', async (ctx, next) => {
@@ -29,7 +30,7 @@ router.get('(.*)', async (ctx, next) => {
 });
 //*
 app.use(router.routes());
-app.use(api.routes());
+
 app.use(router.allowedMethods());
 
 console.log(`Server port: ${1111}`);
