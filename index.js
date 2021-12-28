@@ -20,7 +20,6 @@ app.use(
 );
 app.use(statics(path.join(__dirname, 'assets')));
 //* This is for build
-app.use(statics(path.join(__dirname, 'assets')));
 
 app.use(statics(path.join(__dirname, 'client', 'build')));
 
