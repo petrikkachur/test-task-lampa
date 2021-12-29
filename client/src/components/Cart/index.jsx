@@ -105,6 +105,7 @@ export default function Cart() {
 					phone: '',
 				});
 				dispatch(setLoadingAction(false));
+				dispatch(fetchCart());
 			}
 		});
 	};
