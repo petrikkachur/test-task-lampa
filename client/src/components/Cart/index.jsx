@@ -11,7 +11,6 @@ import {
 import TextField from '../UI/TextField';
 import { validate } from '../../shared/middleware';
 import { TApi } from '../../shared/consts';
-import Loading from '../UI/Loading';
 import { setLoadingAction } from '../../redux/goodsReducer';
 
 const orderSchema = {
@@ -45,7 +44,6 @@ const orderSchema = {
 };
 
 export default function Cart() {
-	const isLoading = useSelector((state) => state.isLoading);
 	const cart = useSelector((state) => state.cart);
 	const dispatch = useDispatch();
 	const [form, setForm] = useState({
@@ -168,7 +166,6 @@ export default function Cart() {
 				</form>
 			</div>
 			<p className={styles.total}>TOTAL: ${cart.total}</p>
-			{isLoading && <Loading className={styles.loading} />}
 		</div>
 	);
 }

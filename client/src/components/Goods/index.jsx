@@ -4,14 +4,12 @@ import { TApi } from '../../shared/consts';
 import GoodCard from '../UI/GoodCard';
 import Pagination from '../UI/Pagination';
 import styles from './styles.module.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setLoadingAction } from '../../redux/goodsReducer';
-import Loading from '../UI/Loading';
 
 export default function Goods() {
 	const ref = useRef(null);
 	const dispatch = useDispatch();
-	const isLoading = useSelector((state) => state.isLoading);
 	const [goods, setGoods] = useState([]);
 	const [goodsCount, setGoodsCount] = useState(0);
 	const [page, setPage] = useState(0);
@@ -86,7 +84,6 @@ export default function Goods() {
 				page={page}
 				setPage={setPage}
 			/>
-			{isLoading && <Loading className={styles.loading} />}
 		</div>
 	);
 }

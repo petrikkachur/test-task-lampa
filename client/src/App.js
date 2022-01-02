@@ -4,8 +4,11 @@ import { TRoutes } from './shared/consts';
 import Goods from './components/Goods';
 import Header from './components/Header';
 import Cart from './components/Cart';
+import { useSelector } from 'react-redux';
+import Loading from './components/UI/Loading';
 
 function App() {
+	const isLoading = useSelector((state) => state.isLoading);
 	return (
 		<BrowserRouter>
 			<Header />
@@ -15,6 +18,7 @@ function App() {
 					<Route path={TRoutes.CART} exact element={<Cart />} />
 				</Routes>
 			</div>
+			{isLoading && <Loading className='loading' />}
 		</BrowserRouter>
 	);
 }
