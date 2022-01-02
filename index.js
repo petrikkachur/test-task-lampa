@@ -22,12 +22,12 @@ app.use(statics(path.join(__dirname, 'assets')));
 app.use(api.routes());
 
 //* This is for build
-app.use(statics(path.join(__dirname, 'client', 'build')));
+// app.use(statics(path.join(__dirname, 'client', 'build')));
 
-router.get('(.*)', async (ctx, next) => {
-	await send(ctx, './client/build/index.html');
-	next();
-});
+// router.get('(.*)', async (ctx, next) => {
+// 	await send(ctx, './client/build/index.html');
+// 	next();
+// });
 //*
 app.use(router.routes());
 

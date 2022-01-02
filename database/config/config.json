@@ -4,20 +4,23 @@
     "password": "password",
     "database": "database",
     "host": "host",
-    "dialect": "dialect"
+    "dialect": "dialect",    
+    "port": "port"
   },
   "test": {
     "username": "username",
     "password": "password",
     "database": "database",
     "host": "host",
-    "dialect": "dialect"
+    "dialect": "dialect",    
+    "port": "port"
   },
   "production": {
     "username": "username",
     "password": "password",
     "database": "database",
     "host": "host",
-    "dialect": "dialect"
+    "dialect": "dialect",    
+    "port": "port"
   }
 }
